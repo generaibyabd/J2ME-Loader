@@ -21,8 +21,18 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v4
 
-    - name: Create keystore.properties for signing
+    - name: Create debug.keystore and keystore.properties
       run: |
+        # إنشاء مجلد .android إذا لم يكن موجودًا
+        mkdir -p $HOME/.android
+        
+        # إنشاء مفتاح التوقيع (debug keystore)
+        keytool -genkey -v -keystore $HOME/.android/debug.keystore \
+          -alias androiddebugkey -storepass android -keypass android \
+          -keyalg RSA -keysize 2048 -validity 10000 \
+          -dname "CN=Android Debug,O=Android,C=US"
+        
+        # إنشاء ملف keystore.properties
         echo "storeFile=$HOME/.android/debug.keystore" > keystore.properties
         echo "storePassword=android" >> keystore.properties
         echo "keyAlias=androiddebugkey" >> keystore.properties
