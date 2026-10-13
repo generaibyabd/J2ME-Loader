@@ -1,7 +1,17 @@
 Manifest-Version: 1.0
-MIDlet-1: Midlet Port Sample, , com.example.porting.HelloMidlet
-MIDlet-Name: Midlet Port Sample
-MIDlet-Vendor: woesss
-MIDlet-Version: 2.0
-MicroEdition-Configuration: CLDC-1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 1.6.0_03-b05 (Sun Microsystems Inc.)
+MIDlet-Data-Size: 1024
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Name: Bounce Tales
+MIDlet-Icon: /icon.png
+MIDlet-Vendor: Nokia
+MIDlet-1: Bounce Tales, /icon.png, RMIDlet
+MIDlet-Version: 2.0.25
 MicroEdition-Profile: MIDP-2.0
+Nokia-MIDlet-Category: Game
+Nokia-Platform: *
+more_games_status: on
+more_games_url: http://more.store.ovi.mobi/games_arcade?intc=ovistore-mc
+ -ger-bounce2-acq-na-device-g0-na-1
+
