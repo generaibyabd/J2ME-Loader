@@ -21,6 +21,13 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v4
 
+    - name: Create keystore.properties for signing
+      run: |
+        echo "storeFile=$HOME/.android/debug.keystore" > keystore.properties
+        echo "storePassword=android" >> keystore.properties
+        echo "keyAlias=androiddebugkey" >> keystore.properties
+        echo "keyPassword=android" >> keystore.properties
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
